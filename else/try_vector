@@ -1,0 +1,13 @@
+#include <iostream> 
+#include <vector> 
+using namespace std; 
+int main () {
+vector<int> v1(4,100); vector<int> v2; vector<int>::iterator it;
+v1[3]=5;
+cout << v1[3] << " " << v1[0] << " " << v1[2] << endl; v2.push_back(2); v2.push_back(8); v2.push_back(18); cout << v2[0] << " " << v2[1] << " " << v2[2] << endl; v2.swap(v1);
+  cout << v2[1] << " " << v1[1] << " " << v1.size() << endl;
+  v1.erase(v1.begin()+1,v1.begin()+3);
+  cout << v1[0] << " " << v1[1] << " " << v1.size() << endl;
+  v1.pop_back();
+  cout << v1[0] << " " << v1[1] << " " << v1.size() << endl;
+for(it=v2.begin(); it!=v2.end();it++) cout << *it << endl; }

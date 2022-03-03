@@ -1,0 +1,4 @@
+g++ -o gen_test generator.cpp p2.cpp recursive.cpp
+./gen_test > _gen_test.cpp
+g++ -o test  _gen_test.cpp p2.cpp recursive.cpp
+./test > out.txt

@@ -1,0 +1,10 @@
+cmake_minimum_required(VERSION 3.17)
+project(p3)
+
+set(CMAKE_CXX_STANDARD 14)
+find_package(OpenGL REQUIRED)
+include_directories(${OPENGL_INCLUDE_DIR})
+find_package(GLUT REQUIRED)
+include_directories(${GLUT_INCLUDE_DIR})
+add_executable(p3 main.cpp vehicle.cpp vehicle.h)
+target_link_libraries(p3 ${GLUT_LIBRARY} ${OPENGL_LIBRARY} m)
